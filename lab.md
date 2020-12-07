@@ -77,9 +77,67 @@ name
 
 3.  Oops! Someone spelled Krusty The Clown's name wrong! Change it to reflect the proper spelling (Crusty should be Krusty).
 
+UPDATE people SET name = 'Krusty the clown' WHERE name = 'Crusty the Clown';
+SELECT * FROM people;
+
+UPDATE 1
+ id |         name         
+----+----------------------
+  1 | Homer Simpson
+  2 | Marge Simpson
+  3 | Lisa Simpson
+  4 | Maggie Simpson
+  5 | Patty Bouvier
+  6 | Selma Bouvier
+  7 | Kent Brockman
+  8 | Ned Flanders
+  9 | Barney Gumble
+ 10 | Itchy
+ 11 | Eric Cartman
+ 12 | Scratchy
+ 14 | Montgomery Burns
+ 15 | Mayor Joe Quimby
+ 16 | Groundskeeper Willie
+ 13 | Krusty the clown
+(16 rows)
+
 4.  Return ONLY Homer Simpson's name from the 'people' table.
 
+SELECT name FROM people WHERE name = 'Homer Simpson';
+
+name      
+---------------
+ Homer Simpson
+(1 row)
+
+
 5.  The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+
+DELETE FROM movies WHERE title = 'Batman Begins';
+SELECT * FROM movies;
+
+id |                title                | year | show_time 
+----+-------------------------------------+------+-----------
+  1 | Iron Man                            | 2008 | 17:00
+  2 | The Incredible Hulk                 | 2008 | 23:55
+  3 | Iron Man 2                          | 2010 | 18:45
+  4 | Thor                                | 2011 | 15:45
+  5 | Captain America: The First Avenger  | 2011 | 14:15
+  6 | Avengers Assemble                   | 2012 | 14:45
+  7 | Iron Man 3                          | 2013 | 21:55
+  8 | Thor: The Dark World                | 2013 | 22:55
+ 10 | Captain America: The Winter Soldier | 2014 | 18:25
+ 11 | Guardians of the Galaxy             | 2014 | 13:10
+ 12 | Avengers: Age of Ultron             | 2015 | 20:20
+ 13 | Ant-Man                             | 2015 | 13:00
+ 14 | Captain America: Civil War          | 2016 | 12:35
+ 15 | Doctor Strange                      | 2016 | 22:00
+ 16 | Guardians of the Galaxy 2           | 2017 | 14:05
+ 17 | Spider-Man: Homecoming              | 2017 | 23:00
+ 18 | Thor: Ragnarok                      | 2017 | 22:10
+ 19 | Black Panther                       | 2018 | 21:00
+(18 rows)
+
 
 6.  We forgot one of the main characters! Add Bart Simpson to the 'people' table
 
