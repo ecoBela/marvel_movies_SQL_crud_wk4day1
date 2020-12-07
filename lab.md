@@ -175,7 +175,25 @@ id |         name
 
 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
 
+INSERT INTO movies (title) VALUES ('Avengers: Infinity War');
+SELECT * FROM movies WHERE title = 'Avengers: Infinity War';
+
+id |         title          | year | show_time 
+----+------------------------+------+-----------
+ 20 | Avengers: Infinity War |      | 
+(1 row)
+
 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
+
+UPDATE movies SET show_time = 20.45 WHERE title = 'Iron Man 3';
+SELECT * FROM movies WHERE title LIKE 'Iron%';
+
+id |   title    | year | show_time 
+----+------------+------+-----------
+  1 | Iron Man   | 2008 | 17:00
+  3 | Iron Man 2 | 2010 | 18:45
+  7 | Iron Man 3 | 2013 | 20.45
+(3 rows)
 
 ## Extension
 
