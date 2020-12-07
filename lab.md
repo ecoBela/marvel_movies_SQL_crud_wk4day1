@@ -141,7 +141,37 @@ id |                title                | year | show_time
 
 6.  We forgot one of the main characters! Add Bart Simpson to the 'people' table
 
+INSERT INTO people (name) VALUES ('Bart Simpson');
+SELECT * FROM people WHERE name = 'Bart Simpson';
+
+id |     name     
+----+--------------
+ 17 | Bart Simpson
+(1 row)
+
 7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
+
+DELETE FROM people WHERE name = 'Eric Cartman';
+SELECT * FROM people;
+
+id |         name         
+----+----------------------
+  1 | Homer Simpson
+  2 | Marge Simpson
+  3 | Lisa Simpson
+  4 | Maggie Simpson
+  5 | Patty Bouvier
+  6 | Selma Bouvier
+  7 | Kent Brockman
+  8 | Ned Flanders
+  9 | Barney Gumble
+ 10 | Itchy
+ 12 | Scratchy
+ 13 | Crusty the Clown
+ 14 | Montgomery Burns
+ 15 | Mayor Joe Quimby
+ 16 | Groundskeeper Willie
+(15 rows)
 
 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
 
